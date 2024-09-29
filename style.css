@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+  color: white;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  animation: fadeIn 2s;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(45deg, #ffb6c1, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 2s;
+  z-index: 1;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+input {
+  width: 350px;
+  height: 50px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin: 15px;
+  outline: none;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  border-bottom: 2px solid #ff00ff;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+
+button {
+  width: 180px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(90deg, #ff00ff, #00f0ff);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out, background 0.3s;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 10px rgba(255, 0, 255, 0.4);
+}
+
+button:hover {
+  transform: scale(1.15);
+  background: linear-gradient(90deg, #00f0ff, #ff00ff);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+.qr-image {
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.qr-image.show {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 10px;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+footer a {
+  color: #00ffff;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ff00ff;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Neon Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+  to {
+    text-shadow: 0 0 30px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff;
+  }
+}
